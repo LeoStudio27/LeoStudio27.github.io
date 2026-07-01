@@ -8,7 +8,7 @@ https://leostudio27.github.io/
 
 ## About
 
-I’m Freeleo27, a Roblox developer focused on fixing bugs, organizing projects, cleaning up systems, and improving gameplay.
+I’m Leo, a Roblox developer focused on fixing bugs, organizing projects, cleaning up systems, and improving gameplay.
 
 ## Featured Projects
 
@@ -19,7 +19,7 @@ A Roblox game I worked on with shops, events, UI, admin tools, and other gamepla
 Play here:  
 https://www.roblox.com/games/94732525818745/Steal-a-Creator
 
-### Guess The Brainrot
+### Guess The Brainrot (SID)
 
 A guessing-style Roblox game with player progression, checkpoints, and organized gameplay systems.
 
