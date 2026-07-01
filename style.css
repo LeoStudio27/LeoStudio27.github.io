@@ -97,13 +97,19 @@ a {
 .section {
   width: min(1050px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 78px 0;
+  padding: 54px 0;
+}
+
+.compact-section {
+  padding: 42px 0;
 }
 
 .hero {
-  min-height: calc(85vh - 70px);
+  min-height: 48vh;
   display: flex;
   align-items: center;
+  padding-top: 70px;
+  padding-bottom: 46px;
 }
 
 .hero-content {
@@ -116,18 +122,18 @@ a {
   font-size: 0.76rem;
   letter-spacing: 1.8px;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(3rem, 7vw, 5.4rem);
   line-height: 1;
   letter-spacing: -2px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
   line-height: 1.15;
   letter-spacing: -1px;
 }
@@ -141,14 +147,6 @@ h3 {
   max-width: 670px;
   color: var(--muted);
   font-size: 1.08rem;
-  margin-bottom: 28px;
-}
-
-.hero-buttons,
-.contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
 }
 
 .btn {
@@ -172,12 +170,6 @@ h3 {
   color: white;
 }
 
-.btn.secondary {
-  background: transparent;
-  color: var(--text);
-  border-color: var(--line);
-}
-
 .card,
 .project-card,
 .contact-card {
@@ -189,7 +181,7 @@ h3 {
 
 .section-heading {
   max-width: 700px;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 
 .about-grid.single {
@@ -207,7 +199,7 @@ h3 {
   color: var(--muted);
 }
 
-.skills-grid {
+.skills-grid.simple {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
@@ -217,7 +209,7 @@ h3 {
   background: rgba(20, 26, 38, 0.85);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 15px;
+  padding: 16px;
   color: var(--text);
   font-weight: 700;
   text-align: center;
@@ -225,15 +217,19 @@ h3 {
 
 .projects-grid {
   display: grid;
-  gap: 18px;
+  gap: 28px;
 }
 
 .projects-grid.two {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-card {
-  padding: 24px;
+  padding: 28px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-top {
@@ -253,7 +249,8 @@ h3 {
 
 .project-link {
   display: inline-flex;
-  margin-top: 18px;
+  width: fit-content;
+  margin-top: 22px;
   color: var(--text);
   font-weight: 800;
   border-bottom: 1px solid var(--accent);
@@ -265,7 +262,7 @@ h3 {
 }
 
 .contact-section {
-  padding-top: 40px;
+  padding-bottom: 54px;
 }
 
 .contact-card {
@@ -274,6 +271,7 @@ h3 {
 }
 
 .contact-buttons {
+  display: flex;
   justify-content: center;
   margin-top: 22px;
 }
@@ -304,12 +302,16 @@ h3 {
 }
 
 @media (max-width: 900px) {
-  .skills-grid {
+  .skills-grid.simple {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-grid.two {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
   }
 }
 
@@ -347,14 +349,20 @@ h3 {
   }
 
   .section {
-    padding: 60px 0;
+    padding: 42px 0;
+  }
+
+  .compact-section {
+    padding: 34px 0;
   }
 
   .hero {
-    min-height: calc(80vh - 70px);
+    min-height: 42vh;
+    padding-top: 54px;
+    padding-bottom: 34px;
   }
 
-  .skills-grid {
+  .skills-grid.simple {
     grid-template-columns: 1fr;
   }
 
@@ -362,7 +370,6 @@ h3 {
     flex-direction: column;
   }
 
-  .hero-buttons,
   .contact-buttons {
     flex-direction: column;
   }
